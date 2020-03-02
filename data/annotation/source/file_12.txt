@@ -1,0 +1,1 @@
+﻿The following .RTF document does not import correctly line numbers in list are missing and text extends onto a second A4 page. CODELINE. The document contains hand optimised RTF and imports correctly into M$ Word and Wordpad. 

@@ -1,0 +1,363 @@
+/*
+* preprocessing.jape
+*
+*/
+
+Phase: preprocessing
+Input: Lookup Token SpaceToken 
+Options: control = all
+
+Rule: TempQuestions(
+	(
+	({Token.kind==word, Token.category== "MD", Token.orth=="upperInitial"}|{Token.kind==word, Token.category== "MD", Token.orth=="lowercase"}|{Token.string=~"[Aa]re",Token.length==3}|{Token.string=~"[Dd]o",Token.length==2}|{Token.string=~"[Hh]ave",Token.length==4}|{Token.string=~"[Dd]id",Token.length==3}|{Token.string=~"[Dd]oes",Token.length==4}|{Token.string=="DAE",Token.length==3}|{Token.string=~"[Dd]ae",Token.length==3})
+	{SpaceToken}
+	({Token.kind==word, Token.category== "PRP", Token.orth=="upperInitial"}|{Token.kind==word, Token.category== "PRP", Token.orth=="lowercase"}|{Token.string=~ "[Ii]",Token.length==1}|{Token.string =~ "[Oo]thers"}|{Token.kind==word, Token.category=="DT", Token.orth=="lowercase"}|{Token.kind==word, Token.category=="DT", Token.orth=="upperInitial"})
+         ({SpaceToken}{Token.kind == word, Token.category== "VBN"})[0,1]
+	)
+	|
+	({Token.string=~"[Dd]id",Token.length==3}|{Token.string=~"[Dd]oes",Token.length==4}|{Token.string=="DAE",Token.length==3}|{Token.string=~"[Dd]ae",Token.length==3})
+	{SpaceToken}
+	{Token.string=~"[Nn]ot",Token.length==3}
+	{SpaceToken}
+	{Token.kind==word, Token.category== "NN"}
+	|
+	({Token.string=~"[Dd]oes",Token.length==4}|{Token.string=="DAE",Token.length==3}|{Token.string=~"[Dd]ae",Token.length==3})
+	{SpaceToken}
+	{Token.kind==word, Token.category== "NN"}
+	{SpaceToken}
+	{Token.kind==word, Token.category== "VBN"}
+	|
+	(
+	({Token.kind==word, Token.category== "WP", Token.orth=="upperInitial"}|{Token.kind==word, Token.category== "WP", Token.orth=="lowercase"}|{Token.kind==word, Token.category== "WRB", Token.orth=="upperInitial"}|{Token.kind==word, Token.category== "WRB", Token.orth=="lowercase"})		
+	{SpaceToken}
+	({Token.string=~"[Dd]o",Token.length==2}({SpaceToken}{Token.kind==word, Token.category== RB}{SpaceToken})[0,1]|{Token.string=~"[Aa]re",Token.length==3}|{Token.string=~"[Mm]eans",Token.length==5}|{Token.string=~"[Aa]bout"}|{Token.string=~"[Dd]oes",Token.length==4})
+	({SpaceToken})[0,1]
+	({Token.kind==word, Token.category== "PRP", Token.orth=="upperInitial"}|{Token.kind==word, Token.category== "PRP", Token.orth=="lowercase"}|{Token.kind==word, Token.category=="DT", Token.orth=="lowercase"}|{Token.kind==word, Token.category=="DT", Token.orth=="upperInitial"}|{Token.kind==word, Token.category== "NNP"})[0,1]
+	)
+	|
+	(
+	{Token.string=~"[Ii]s",Token.length==2}{SpaceToken}({Token.kind==word, Token.category== "NN"}|{Token.kind==word, Token.category== "PRP$", Token.string!="my"}|{Token.string == "anybody"}|{Token.string =~ "[Aa]nyone"}|{Token.string =~ "[Ss]omebody"}|{Token.string =~ "[Tt]his",Token.length==4}|{Token.string =~ "[Tt]hat",Token.length==4})
+	)
+	|
+	(
+	{Token.string =~ "[Aa]ny",Token.length==3}
+	{SpaceToken}
+	({Token.string=~ "[Hh]elp",Token.length==4}|{Token.string=~"[Aa]ssistance"})
+	{SpaceToken}
+	({Token.string=~ "[Oo]n",Token.length==2}|{Token.string=~"[Ii]s",Token.length==2}|{Token.kind == word, Token.category== MD})
+	)
+	|
+	(
+	{Token.string =~ "[Aa]ny",Token.length==3}
+	{SpaceToken}
+	({Token}{SpaceToken})[0,1]
+	({Token.string=~ "[Ii]dea"}|{Token.string=~ "[Ii]deas"}|{Token.string=~"[Hh]int"}|{Token.string=~"[Hh]ints"}|{Token.string=~"[Ss]uggestion"}|{Token.string=~"[Ss]uggestions"}|{Token.string=~"[Cc]lue"}|{Token.string=~"[Cc]lues"}|{Token.string=~"[Cc]omment"}|{Token.string=~"[Cc]omments"}|{Token.string=~"[Rr]ecommendation"}|{Token.string=~"[Rr]ecommendations"})
+	)
+	|
+	(
+	({Token.string =~ "[Hh]as",Token.length==3}|{Token.string =~ "[Dd]oes",Token.length==4}|{Token.string =~ "[Cc]an",Token.length==3})
+	{SpaceToken}
+	({Token.string =~ "[Aa]nyone"}|{Token.string =~ "[Aa]nybody"}|{Token.string =~ "[Ss]omebody"})
+	{SpaceToken}
+	({Token.kind == word, Token.category== "VBN"} | {Token.string =~ "[Kk]now"}|{Token.string =~ "[Hh]elp"})
+	)
+	|
+	(
+	{Token.string=~ "[Hh]ow",Token.length==3}
+	{SpaceToken}
+	{Token.kind==word, Token.category== "TO"}
+	{SpaceToken}
+	{Token.kind==word, Token.category== "VB"} 
+	)
+	|
+	(
+	{Token.string=~ "[Hh]ow",Token.length==3}
+	{SpaceToken}
+	{Token.kind==word, Token.category== "MD"}
+	{SpaceToken}
+	{Token.kind==word, Token.category== "PRP"} 
+	)
+	|
+	(
+	{Token.string=~ "[Hh]ow",Token.length==3}
+	{SpaceToken}
+	({Token.string=~ "[Mm]uch"}|{Token.string=~ "[Mm]any"}|{Token.string=~ "[Ll]ong"})
+	({SpaceToken}({Token.string=~ "[Dd]o",Token.length==2}|{Token.string=~ "[Dd]oes",Token.length==4}))[0,1]
+	)
+	|
+	(
+	({Token.string=~"[Ii]s",Token.length==2}|{Token.string=~"[Aa]re",Token.length==3}|{Token.string=~"[Ww]ere",Token.length==4})
+	{SpaceToken}
+	({Token.kind==word, Token.category== EX}|{Token.string=~ "[Yy]ou",Token.length==3}|{Token.string=~ "[Ii]t",Token.length==2})
+	)
+	|
+	(
+	({Token.string=~"[Aa]m",Token.length==2}|{Token.string=~"[Aa]re",Token.length==3})
+	{SpaceToken}
+	({Token.string=~"[Ii]",Token.length==1}|{Token.string=~"[Yy]ou",Token.length==3})
+	)
+	|
+	(
+	({Token.kind==word, Token.category== "MD", Token.orth=="upperInitial"}|{Token.kind==word, Token.category== "MD", Token.orth=="lowercase"})
+	{SpaceToken}
+	({Token.kind==word, Token.category== "EX"})
+	)
+	|
+	(
+	({Token.kind==word, Token.category== "WP", Token.orth=="upperInitial"}|{Token.kind==word, Token.category== "WP", Token.orth=="lowercase"}|{Token.kind==word, Token.category== "WRB", Token.orth=="upperInitial"}|{Token.kind==word, Token.category== "WRB", Token.orth=="lowercase"})
+	{SpaceToken}
+	({Token.kind==word, Token.category== "RB"}|{Token.kind==word, Token.category== "NN"}|{Token.string=~"[Ii]s",Token.length==2}|{Token.string=~"[Aa]re",Token.length==3})
+	)
+
+):tempQ-->:tempQ
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("tempQ");	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","TempQuestions");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"Questions", newFeatures);
+}
+
+
+/**********************************QUESTION MARK**************************************/
+Rule: TempQuestionMark(
+	{Token.string=="?"}
+	):tempQM-->: tempQM
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("tempQM");	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","TempQuestionMark");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"QuestionMark", newFeatures);
+}
+
+/**********************************PARTICIPANT**************************************/
+Rule: Participant
+(  
+ 	{Lookup.majorType == person_first}  
+	|
+	(
+ 	{Token.kind==word, Token.category==NNP, Token.orth==upperInitial, Token.length>2}
+	{SpaceToken}
+	{Token.kind==word, Token.category==NNP, Token.orth==upperInitial, Token.length>2}
+	)
+	|
+	(
+	{Token.kind==word, Token.category==NNP, Token.orth==upperInitial, Token.length>2}
+	{SpaceToken}
+	{Token.kind==word, Token.category==NNP, Token.orth==upperInitial, Token.length>2}	
+	{SpaceToken}
+	{Token.kind==word, Token.category==NNP, Token.orth==upperInitial, Token.length>2}	
+	)
+):person  
+-->  
+{  
+AnnotationSet person = bindings.get("person");  
+Annotation personAnn = person.iterator().next();  
+FeatureMap features = Factory.newFeatureMap();  
+features.put("gender", personAnn.getFeatures().get("minorType"));  
+features.put("rule", "Participant");  
+outputAS.add(person.firstNode(), person.lastNode(), "Participant",  
+features);  
+}
+
+/**********************************TEMP SUGGESTIVE**************************************/
+
+Rule: TempSuggestive(
+	(
+	{Token.string=~"[Yy]ou", Token.length==3}
+	{SpaceToken}
+	({Token.string=~"[Tt]ried"}|{Token.string=~"[Tt]ry",Token.length==3}|{Token.string=~"[Cc]heck",Token.length==5}|{Token.string=~"[Cc]hecked"}|{Token.string=~"[Ll]ook at"}|{Token.string=~"[Ll]ooked at"}|{Token.string=~"[Rr]evise"}|{Token.string=~"[Rr]evised"}|{Token.string=~"[Cc]onsider",Token.length==8}|{Token.string=~"[Cc]onsidered"})
+	)
+	|
+	(
+	({Token.string=~"[Ii]s",Token.length==2}|{Token.string=~"[Ww]hy",Token.length==3})
+	{SpaceToken}
+	{Token.string=~"[Dd]o",Token.length==2}
+	{SpaceToken}
+	{Token.kind==word, Token.category=="RB"}
+	{SpaceToken}
+	{Token.string=~"[Yy]ou",Token.length==3}
+	{SpaceToken}
+	({Token.string=~"[Tt]ry",Token.length==3}|{Token.string=~"[Cc]heck",Token.length==5}|{Token.string=~"[Ss]ee",Token.length==3}|{Token.string=~"[Ll]ook at"}|{Token.string=~"[Rr]evise"})
+	)
+	|
+	(
+        ({!Token.string=~"[Ii]",Token.length==1}{SpaceToken})
+	({Token.string=~"[Cc]heck",Token.length==5}|{Token.string=~"[Tt]ry", Token.length==3}|{Token.string=~"[Rr]evise"}|{Token.string=~"[Ll]ook",Token.length==4}{SpaceToken}{Token.string=~"[Aa]t",Token.length==2})
+	({SpaceToken}{Token.string=~"[Ii]t",Token.length==2}|{SpaceToken}{Token.string=~"[Tt]his",Token.length==4}|{SpaceToken}{Token.string=~"[Tt]o",Token.length==2})[0,1]
+	({SpaceToken}{Token.string=~"[Oo]n",Token.length==2}|{SpaceToken}{Token.string=="[Oo]ut",Token.length==3}|{SpaceToken}{Token.string=~"[Cc]heck",Token.length==5})[0,1]
+	)
+
+):tempSug-->:tempSug
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("tempSug");	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","TempSuggestive");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"TempSuggestive", newFeatures);
+}
+
+
+/**********************************TEMP NOT SUGGESTIVE**************************************/
+
+Rule: TempNSuggestive(
+	(
+	({Token.string=~"[Ii]",Token.length=="1"}|{Token.string=~"[Ii]s",Token.length=="2"}|{Token.string=~"[Ii]'m",Token.length=="3"}|{Token.string=~"[Ii]'ll",Token.length==4}|{Token.string=~"[Ii]",Token.length==1}{SpaceToken}{Token.string=~"[Aa]m",Token.length==2}|{Token.string=~"[Ii]",Token.length==1}{SpaceToken}{Token.string=~"[Ww]ill",Token.length==4}|{Token.string=~"[Tt]o",Token.length==2})
+	({SpaceToken}{Token.string=~"[Cc]heck",Token.length==5}|{SpaceToken}{Token.string=~"[Tt]ry",Token.length==3}|{SpaceToken}{Token.string=~"[Rr]evise"}|{SpaceToken}{Token.string=~"[Ll]ook"}{SpaceToken}{Token.string=~"[Aa]t",Token.length==2})
+	({SpaceToken}{Token.string=~"[Ii]t",Token.length==2}|{SpaceToken}{Token.string=~"[Tt]his",Token.length==4}|{SpaceToken}{Token.string=~"[Tt]o",Token.length==2})[0,1]
+	({SpaceToken}{Token.string=~"[Oo]n",Token.length==2}|{SpaceToken}{Token.string=="[Oo]ut",Token.length==3}|{SpaceToken}{Token.string=~"[Cc]heck",Token.length==5})[0,1]
+	)
+):tempNSug-->:tempNSug
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("tempNSug");	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","TempNSuggestive");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"TempNSuggestive", newFeatures);
+}
+
+
+/**********************************TEMP REQUIEREMENT**************************************/
+
+Rule: TempRequirement(
+	{Token.string=~"[Ww]ould not"}
+	{SpaceToken}
+	{Token.string=~"[Bb]e",Token.length==2}
+	{SpaceToken}
+	{Token.string=~"[Nn]ice"}
+	
+):tempRequire-->: tempRequire
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("tempRequire");	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","TempRequirement");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"TempRequirement", newFeatures);
+}
+
+/**********************************TEMP NEGATIVE**************************************/
+
+Rule: TempNegative(
+	{Token.string=~"[Pp]roblem"}|{Token.string=~"[Ee]rror"}|{Token.string=~"[Ii]ssue"}|{Token.string=~"[Pp]roblems"}|{Token.string=~"[Ee]rrors"}|{Token.string=~"[Ii]ssues"}|{Token.string=~"[Bb]ug",Token.length==3}|{Token.string=~"[Bb]ugs",Token.length==4}|{Token.string=~"[Tt]rouble"}|{Token.string=~"[Tt]roubles"}|{Token.string=~"[Dd]enied"}|{Token.string=~"[Ww]rong"}|{Token.string=~"[Ee]xception"}|{Token.string=~"[Ee]xceptions"}|{Token.string=~"[Ff]ail"}|{Token.string=~"[Ff]ailed"}
+): tempNegative-->: tempNegative
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("tempNegative");	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","TempNegative");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"TempNegative", newFeatures);
+}
+
+
+/**********************************ABBREVIATIONS**************************************/
+
+Rule: AbbreviationRule(
+	{Token.kind==word, Token.length=="1"}{Token.string=="."}{Token.kind==word, Token.length=="1"}{Token.string=="."}
+): abbreviation-->: abbreviation
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("abbreviation");	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","AbbreviationRule");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"ABV", newFeatures);
+}
+
+/**********************************OTHERS**************************************/
+
+Rule: FilesRule(
+	({Token}{Token.string=="."}({Token.string=="xar"}{Token.string=="xml"}|{Token.string=="txt"}|{Token.string=="war"}|{Token.string=="jar"}|{Token.string=="png"}|{Token.string=="jpg"}|{Token.string=="gif"}|{Token.string=="java"}|{Token.string=="sh"}|{Token.string=="vm"}|{Token.string=="doc"}|{Token.string=="csv"}|{Token.string=="els"}|{Token.string=="odt"}))
+	|
+	({Token}
+	({Token.string=="_"})[0,1]
+        {Token.kind==number}
+        {Token.string=="."}
+        {Token.kind==number}
+        ({Token.string=="."}{Token.kind==number})[0,2]
+         )
+	
+
+): files-->: files
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("files");	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","FilesRule");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"Others", newFeatures);
+}
+
+
+/**********************************CODE_LINE**************************************/
+
+Rule: AttachRule1
+(
+
+	{Token.string=="org"}{Token.string=="."}{Token.string=="apache"}{Token.string=="."}{Token.string=="org.apache.commons"}
+	|
+	({Token.string == "CODELINE"}|{Token.string =~ "[Cc]odeline"}|{Token.string == "STARTCODE"}|{Token.string =~ "[Ss]tartcode"})
+	|
+	{Token.string=="javax"}{Token.string=="."}{Token.string=="servlet"}
+	|
+	{Token.string=="org"}{Token.string=="."}{Token.string=="apache"}
+	({Token})[8]
+	{Token.string=="."}{Token.string=="java"}
+	|
+	{Token.string=="java"}{Token.string=="."}{Token.string=="lang"}
+	|
+        {Token.string=="com"}{Token.string=="."}{Token.string=="xpn"}{Token.string=="."}{Token.string=="xwiki"}
+	|
+	{Token.string=="org"}{Token.string=="."}{Token.string=="xwiki"}
+	|
+        {Token.string=="org"}{Token.string=="."}{Token.string=="codehaus"}{Token.string=="."}{Token.string=="plexus"}
+	|
+	({Token.string=="#"}{Token})
+	|
+	({Token.string=="@"}({Token.string=="import"}|{Token.string=="include"}))
+	|
+{Token.string=="com"}{Token.string=="."}{Token.string=="sun"}{Token.string=="."}{Token.string=="star"}{Token.string=="."}{Token.string=="lib"}
+	
+): attach1
+-->
+: attach1
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("attach1");	
+	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","AttachRule1");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"CODE_LINE", newFeatures);
+}
+
+/**********************************Temporal Sentiments**************************************/
+Rule: TempSentN
+(
+	{Lookup.majorType==negative}
+	|
+	(({Token.string=~"[Nn]ot",Token.length==3}|{Token.string=~"[Nn]o",Token.length==2}){SpaceToken}({Lookup.majorType==negative, !Token.category =="VB"}))
+	|
+	({Token.string=~"[Dd]oes",Token.length==4}|{Token.string=~"[Ii]s",Token.length==2}){SpaceToken}{Token.string=~"[Nn]ot",Token.length==3}{SpaceToken}{Lookup.majorType==positive}
+
+): tempSentN-->: tempSentN
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("tempSentN");	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","TempSentN");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"TempSentN", newFeatures);
+}
+
+Rule: TempSentP
+(
+
+	{Lookup.majorType==positive}
+	
+): tempSentP-->: tempSentP
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("tempSentP");	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","TempSentP");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"TempSentP", newFeatures);
+}
+
+
+/*Rule: Urlpre
+*
+*(	(({Token.string =~ "[Hh]ttp"}	|
+*	  {Token.string =~ "[Ff]tp"})
+*	 {Token.string == ":"}
+*	 {Token.string == "/"}
+*        {Token.string == "/"}
+*        )	|
+*	({Token.string == "www"}
+*         {Token.string == "."}
+*        )
+*):urlpre
+*—>
+*:urlpre
+*{
+*gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("urlpre");	*gate.FeatureMap newFeatures= Factory.newFeatureMap();
+*	newFeatures.put("rule","Urlpre");
+*	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"UrlPre", *newFeatures);
+*}
+*/
+
+

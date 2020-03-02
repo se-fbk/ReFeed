@@ -1,0 +1,1 @@
+﻿can not open sample file OOo hangs with CPU load 100%. Tested with OOo 2.0.4 2.2 2.2.1 m223 on Windows and Linux 

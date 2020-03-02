@@ -1,0 +1,1 @@
+﻿Create a Chart from a Writer table than add a column at the end to the table wll not be recognized by Chart even when updating manually by F9. Adding a Row will work fine. Please have a look whether it is possible to fix this for 2.3. 

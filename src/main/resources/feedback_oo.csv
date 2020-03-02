@@ -1,0 +1,906 @@
+"When you create a numbered list, by default you get ""1. 2. 3. - option"" if you chose for example ""a) b) c) - option"", then you write a piece of text not included in the numbered list, and then you want to include another numbered list, you get again ""1. 2. 3. - option"" and must change to ""a) b) c) - option"" if this is what you want. Enhancement: When using numbered lists, you must get by default the last option you choose instead of the ""1. 2. 3. - option"""
+"I want to place a frame around a text line. I am doing this by marking the line and then choosing ""Tabelle"" ""Umwandeln"" ""Text in Tabelle"". The frame around the text line can be seen. When I am printing 2 pages on 1 sheet of paper (I am doing this for a huge book) the above line will not be printed. I know this problem from other tables. It can be frustrating. I can correct this by choosing ""Umrandungsstil"" 1pt. I feel ""1pt"" should be the default one without having to adjust for. Its a bad look and feel if you see a line on the screen but not on the printed paper using a standard Laser printer HP4000 with a standard driver. I also feel it would be an enhancement if by clicking on ""Tabelle"" ""Linienstil"" the actual value would be shown. So would be more easy to work with.  Best Regards Matthias Weisser"
+"I have two documents. I wish to copy text from one and paste into the other. Both documents have their text font formatted as ""Times New Roman"" 12pt. Find test documents attached as Copy.odt and Paste.odt When I copy at least one full paragraph, (including the final hard return) and paste the text at the start of a paragraph, however, everything up to the last hard return is formatted as 10pt. Any partial paragraph up to the last hard return adopts the format of the paragraph it was pasted before. If I paste into the middle of a paragraph, or copy less than one paragraph without its hard return, the entire pasted text adopts the format of the paragraph it is pasted into. The key is copying and pasting between different documents. Pasting into the same document as copied from does not show this behavior. Paste Special... OpenOffice.org Writer shows the same behavior. Using Paste Special... Formatted Text (RTF) pastes the exact source format as expected, even across documents. Using Paste Special... Unformatted Text adopts the destination format as expected, even across documents. I have also verified this same behavior in OO.org Writer 1.0.4.17 (Novell Build) on Linux SUSE 10."
+Related to bug #79611 OOWriter should support bookmarks within frames aka shapes like for example within draw:text-box since 1. it is usefull and 2. the odf specs say that it's legal and imho OOWriter should follow the specs to be compatible to other word-processors like KWord where it's already implemented.
+"Since OOo does not provide the feature of inserting diagonal table header, the user will meet the following problems  when they use drawing tool to draw diagonal line in the cells to achieve that feature, the diagonal line won't be changed if the size of the cell changes, if the client wanna input word at the part of diagonal line he  can only do so by using self chosen text frame to input word which will be very inconvenient, so we can meet user's need by inserting diagonal line table header that is to  combine   inserting diagonal line with inputing word to fulfill the function of inserting diagonal line table header, we can add ""insert diagonal line table header "" menu item in the main menu ̢���Insert"" and at the same time we can build a box called"" inserting clined line table header"". the box of "" inserting clined line table header is used to provide the customer with the function of choosing clined line table header format, inputing word and choosing the font size of the word."
+"Create a Chart from a Writer table, than add a column (at the end) to the table -> wll not be recognized by Chart, even when updating manually by F9. Adding a Row will work fine. Please have a look whether it is possible to fix this for 2.3."
+"This is about dialog box that pops up with CTRL+P (or the File > Print... menu). It offers only two possible actions: Either press [OK] button to start printing straightaway; or [Cancel] to cancel all changes. But it does not allow two other important options: 1. Save all settings and exit (without needing to print anything) 2. Check how the current setting will affect the printed pages. In other words, give a direct link with ""page preview"". When he closes the ""Page preview"" window, the control should come back to the ""Print..."" window. This will allow the user to check the effect of his settings iteratively; so that he will take a print only when he is fully satisfied. BTW why call it ""page preview""? It should be called ""print preview""; because this view ACTUALLY shows how the **PRINT** looks."
+Fuirst create a document using Numbering types as appropirate for Bulgaria and Russia (using Cyrillic letters instead of Latin). Then save it as a Writter document in MS Office 2000 *.doc format. Then open it again to follow up the work with this document. When open again surprisingly the expected numbering type with cyrillic letters is lost. All Cyrillic letters in the numbering are replaced with numbers. Please see the attached file Cyrillic_Numbering_problems-OOo.zip with screen shots and the example file.
+"I'm using a vertical ruler for writing a document in Hebrew, but the ruler appears only for the last page of the document.  There are about 12 pages for the entire document."
+"Current behaviour: * OOoWebWriter always shows absolute path (to image for example) * OOoWW saves the doc with absolute path or relative depending what settings are used I find this counterintuitive and the old mantra-acronym is violated – WYSIWYG. I would suggest: * OOoWW settings -- how the OOoWW should handle (i.e. display, save) path * OOoWW SHOWS and saves path depending what settings are used So, if I would like to work with relative path, when I link to image from current directory, I will see ""image.png"" so I would be sure it is relative, not ""/home/macias/..../image.png"" which would later be translated. Advantages: * WYSIWYG maintained + no need to check the saved doc if it is correct + valuable visual feedback right away * more intuitive way to handle links * one step less, or more exactly no additional steps"
+"The ""Save Merged Document"" option doesn't work. I open my Starting Document, go to step 8. The merge wizard says its creating 3 documents (the number of records in my Data Source). I Click ""Save Merged Document"" and then ""Save Documents"" and check the ""Save As Single Document"" option, but the resulting document contains only the last of the 3 data-record-documents."
+"The following .RTF document does not import correctly, line-numbers in list are  missing and text extends onto a second (A4) page.  CODELINE.  The document contains hand-optimised RTF and imports correctly into M$ Word and  Wordpad."
+"This issue has been split from issue 80204. See attached RTF - the last line breaks onto a new page, which is not the case in MS Word. Same document as .doc gives the same result in Writer. At first glance I noticed a small ""mismatch"" in the large block of empty paragraphs in the lower part of page 1. Maybe problem is there."
+"Cannot open sample file, OOo hangs with CPU load 100%. Tested with OOo 2.0.4, 2.2, 2.2.1, m223 on Windows and Linux"
+"Our scenario: we need to write (technical) manuals with a few hundred pages. Therefore we've designed a very basic set of styles (heading, subheading, code,..) and want to force our writers to use only these styles. No own styles, no direct formatting,.. Since consistency is a must when writing documentation, any chance to format besides the ~10 default styles is not acceptable. Any realistic chance to see the feature implemented? Or can anyone estimate how much work it would be, since I'm a programmer myself.. (see also http://www.oooforum.org/forum/viewtopic.phtml?t=60359 )"
+"Hi, Steps to reproduce: - be sure that the language environnement and of the document is English(USA) and that French dictionnary is not installed - open a new doc and write a sentence in French, for example Je vais au march���. - Autocorrection will underline some words, right click on an underlined word and set the paragraph to French - then write a sentence in English, nothing is underlined - under Format>Character, you see that the language is French for this paragraph - write a sentence in German, it's exactly the same Autocorrection is now completly desabled. Kind regards - Sophie"
+
+"I expect this is a duplicate, but I couldn't fine it. 
+If a MS Word file contains a paragraph definition that uses a hanging indent, e.g.
+This is the beginning of the line, followed by the
+     hanging indent for the rest of the paragraph
+     that is typed continuously.
+
+then, when opening this file in OpenOffice, the paragraph displays correctly. However, if it is then saved in MS Word 2000 format and then opened again, the paragraph definition fails to display / print properly. Examples of this behaviour can easily be provided. Sadly, this one defect has caused me, much to my regret, to go to the Dark Side and purchase MS Office (insert icon for crying eyes here!)"
+
+"Open attached document, paste dummy text in text body -> will show ""through"" the inner frame."
+"Open attached document, move the inner frame a little bit -> it will jump to a position besides the outer frame"
+"When try to open file PZ_1.doc in Writer, I lose some content of my document. In MSWord I see all text. If I make preview of this document, I can't exit preview because OOo doesn't respond. Also I can't ""Select All"" in this document - both from menu, and using keyboard. I can see hidden content by the way: delete text frame from header, preview document, close preview. Also we can see text when select empty space in the end, change paragraph style to ""Default"", for example. We get some empty space and text in the end. Select text, including empty space and change paragraph  style once again. Undo, Undo - and we can see all text."
+"OEBPS and OCF are two generations of an open-standard format for eBooks, both built upon HTML, XML and ZIP. This format is used internally by proprietary eBook tools such as Microsoft Reader, MobiReader and their respective compilers, and directly by open-source, open-standard eBook readers such as OpenBerg Lector or dotReader/ThoutReader. There is also a possibility that this format will be used by One Laptop Per Child to provide eTextBooks for Third-World Children. Unfortunately, to this day, there are no open-source tools able to produce OEBPS/OCF eBooks. Which is, most definitely, a shame. I therefore suggest the inclusion of OEBPS/OCF import and export filters to OpenOffice. The export filter should be able to * convert a document to either one or several XHTML files (split by, say, chapter or section, etc. depending on the user's wishes), with their dependencies (images, style sheets, etc.) * create a metadata XML-based ""package file"" containing informations about the book title, author, subject... as well as the reading order of the split XHTML files, as per the OCF file format * for compliance with OCF, add the ODF metadata information * zip it all. Conversely, the import filter should be able to open that same format. More details about OEBPS/OCF may be found at http://www.idpf.org/specs.htm . An example open-source reader may be found at http://www.openberg.org . Caveat, I'm one of the authors."
+"I would like to request the ability to add sub-equations to the main equation numbering scheme. Current method: (assuming chapter 3) sum of the forces in x-direction = 0  (3.1) F1x + F2x = 0  (3.2) sum of the forces in y-direction = 0 (3.3) F1y + F2y = 0  (3.4) In our technical journals, this type of formatting is frowned upon whereas the recommended way of doing this would be sum of the forces in x-direction = 0  (3.1a) F1x + F2x = 0  (3.1b) sum of the forces in y-direction = 0 (3.2a) F1y + F2y = 0  (3.2b) In this manner, the reader knows that equations 3.2b is the child of equation 3.2a and not an entirely new equation. Any feedback would be great..."
+"I have a widescreen 20"" LCD, and in standard view a page takes up exactly half the page, and is placed flush left, with lots of dead area to the right. Either show pages Center, or allow for a default layout of having 2 pages side-by-side where the viewing area supports it. This is how Word 2007 handles it, and it looks nicer, like you would lay out pages on a table for reading. In short, OOo needs to make better use of the available screen space."
+"In science organisms' names are usually in italized letters. For example, it is more correct to write: - [i]C.neoformans[/i] that - C.neoformans. I was trying to use the auto-correct function to do this, auto-changing every instance of C.neoformans (I'm writing a text on it) with the italized form, but it seems there is no way. I also believe that a similar function (auto-formatting) would be useful for other tasks."
+"Actually, I would like to ask for 2 enhancement regarding the appearance of header and footer in the writer application: a) visually dimm (watermark-like) header / footer ------------------------------------------------- Dimm the appearance of header and footer while in the document (body) editing mode (in comparison to the print preview and print mode), by giving them a softer appearance, like a watermark. -> This way one can easily edit the body section of a document without being distracted by header and footer, which are often very similar to the body text (and are mostly the same for all the pages). Still one does clearly see how the document looks like with header/footer. b) protect header and footer against accidental editing ------------------------------------------------------- Using a double click rather a single click to enter editing mode for existing header / footer. This helps user to avoid accidentally modifying header / footer. (I know, there are work arounds, so one could protect it by an additional step. But let's make it easier not more difficult.) I often use templates for different documents and it would make life much easier. While I find plenty areas of OOo superior to MS Office, I find the above 2 areas more convenient solved in MSO (in editing the document body and editing existing headers / footers). (others were also looking for it: see http://www.openoffice.org/servlets/ReadMsg?listName=users&msgNo=123306 ) Thanks in advance for this enhancement. rgloor"
+"opening a writer document in read-only mode, i CAN change the document by invoking macros. A reload is possible to delete all changes to the read-only document. But it is not possible to undo changes made by macros step-by-step. I want an Undo in a read-only document, please."
+"I was editing a biggish (35 pages, 4.3 MB) document, with track changes and show changes. While making changes on p. 25, Writer froze, CPU bound. Killing and restarting led to the same behaviour. That was with version 2.0 under Linux. Then with 2.2 under Windows XP, exactly the same symptoms. Also with the latest 2.3 snapshot under XP. I tried turning off show changes but it didn't help. I tried making somewhat different changes, in either of the 2 paragraphs on that page, but it always freezes after I've added a bit of text. How long it stays alive does depend on exactly where I insert new text in that paragraph. It does seem to be reproducible. When I opened the original unedited document and continued with my editing from the paragraphs in question, it worked fine. I've tried to simplify and also obfuscate the document, but it's hard to find things to do that don't make the bug disappear. Deleting all the images (using the navigator) and replacing all e's by x's did preserve the bug, as did removing certain text, but other similar changes made the bug go away. I don't mind sharing the document with some developers, but I don't really want it to be public (it's a draft of a chapter of a student's thesis). Is it possible to submit a file by e-mail to someone?"
+
+"footnote symbols in headings are shown in ""chapter name"" field. I think the
+symbol should not appear. Like in indexes for example."
+
+"1. create a new OOo text document
+2. type '%theta'
+3. select the entered text using HOME followed by SHIFT+END
+4. convert the selected text to a formula using ALT+I, O, F 
+5. attempt to type your next word
+
+After the formula has been inserted, the *text* cursor should be given back,
+rather than the resulting object being highlighted in the current way.
+
+The current behaviour requires a rather unintuitive ESC key press before the
+user can continue typing.
+
+For anyone writing a document with a lot of formulae and symbols, this small
+change would make usability quite a bit nicer.
+
+A further unituitive thing is that after pressing ALT+I, O, F, the UP and DOWN
+keys seem to move the formula around. Worse, after pressing 'UP', pressing
+'DOWN' does not return the formula to its original place. And pressing 'DOWN' a
+second time moves the formula *up* again. Pressing 'LEFT' and 'RIGHT' don't do
+anything. I don't know what this feature is, and I don't see any conceivable use
+for it; I would rather that the arrows did what I was doing just before I
+pressed ALT+I, O, F: moving the cursor around my document.
+
+I would like to say here that the forumula editor has managed to create a good
+syntax that is easy to use and intuitive, so well done on that and thank you
+very much."
+
+"Windows ""Insert>Field>Other"" and the one, that opens after you press Right Mouse
+Button on the field and choose ""Fields.."" AREN'NT resizable.
+
+It's a really big issue for our programming team and possibly for others,
+because we have integrated OpenOffice in our project/product and using it for
+printing various documents.
+
+To begin with, there are patterns for variuos cases. But in these patters we
+need to insert missing data for example list of users with their names, name  of
+director, name of group leader, end date of project and so on.
+
+Now, some real example. We write in the ""Edit Fields: Functions"" section
+""Reference"" things like that:
+""<group = RootEntity[0].Group;tmp =
+group.Protocols.GetEnumerator();tmp.MoveNext();committee =
+tmp.Current.ExamCommitteeMembers.GetEnumerator();string.Empty>
+
+Try to edit this, when you are able to see maximum 3 words at the same time."
+
+"Open the attached doc and the navigator. You will see two frames (Rahmen13 and
+Rahmen14 in German localization) greyed out.
+These frames cannot be deleted, not even with api. If you do so, the frames are
+live after reloading the document.
+Strange that you won't find the names of the frames in the zip archive."
+
+"If a HTML file contains apostrophes (&apos;) Writer imports them verbatim 
+without mapping them to real apostrophes.
+I will attach a test file...
+If you open this file in a browser of your choice you will see the 
+string: 'test'
+If you open this file in OOo Writer you will see this string: &apos;test&apos;"
+
+"It is currently not possible to 'file/open' an XML file valid to the ODF schema.
+It can be done by an identity transform of such a file. 
+
+Please could this be added to open office. 
+
+Rationale. When a user creates an XML file (from some other XML format) it would
+be nice to be able to open it directly in open office.
+
+
+Thanks. 
+
+Dave Pawson
+www.dpawson.co.uk"
+
+"page numbering stays thesame, even when you go to the next page, if you're 
+almost halfway page 2 (and page 2 takes in the most of your screen), it still 
+says page 1 / x , and it changes when the previous page isn't visible anymore. 
+
+That's much to late, it better changes when a page takes more than the half of 
+the space on the screen.(mostly visible). 
+
+I've already experienced a lot of inconvenience when working with someone else 
+and saying the pages of corrections that I wanted to do, so that the other dude 
+can make corrections. 
+I kept saying the wrong page over and over again.
+
+Everyone can duplicate this by:
+- making a new text document in OpenOffice Writer and making 2 or more pages.
+- then going to the first page 
+- going slowly down until you're on the next page"
+
+"OOo seems unable to import files in the Docbook format.  See the above URL for 
+the file called ""firewall.sgml""  Renaming the file to ""firewall.xml"" doesn't help.  
+
+Instead of seeing a structured, formatted document with the markup hidden by the
+program the markup is visible in the same way you would see it with vi or pico."
+
+"In the attached document, there is a HP logo on the top of pages 1 and 2.  On
+the first page it's in the right place but on the second page it displays in the
+middle of the paragraph.  It should be on the top left side."
+
+"The problem arises when working with OOo and MS Word together. MS Word does not
+automatically update field functions on startup, whereas OOo does. The behaviour
+of OOo would be what I expect and what is right in my opinion. But in my special
+case I need to disable the automatic updating, so that OOo behaves like MS Word.
+
+See my thread in the mailing list for more details
+http://www.openoffice.org/servlets/ReadMsg?listName=dev&msgNo=20546
+
+The attachment also describes my problem"
+
+"(To be discussed and split in I-Team meeting :) Therefore assigning to MMP)
+
+- New Writer doc
+- Tools - XML Settings
+
+A) 2 entries:
+
+- MediaWiki
+- MediaWiki_Web
+
+why?
+Should be: 'MediaWiki'
+
+B) Edit each entrry
+For 'Application' stays 'Unknown'
+
+Should be: %PRODUCTNAME Writer or...
+
+C)... do we need a %PRODUCTNAME Writer Web in the 'Application' listbox?"
+
+"Wiki - Load/Send
+-> the default buttons in those dialog are in the order:
+Help - Cancel - Load|Send
+
+Wiki - Settings and Settings - Add
+-> the default buttons in those dialog are in the order:
+Help - Ok - Cancel
+
+Please find the best order and keep it consistent for all dialogs.
+
+TV: Will fix this when the spec is has specified the dialogs.
+
+ES: according to TV's statement, reassigning to MMP."
+
+"Wiki - Load or Send dialog
+-> make them wider in order to read most of the Wiki URL
+
+TV: Will fix this when the spec is has specified the dialogs.
+
+ES: according to TV's statement, reassigning to MMP."
+
+"Error messages are displayed in the console but not to the user, examples:
+- when an URL is malformed: ""mywiki.org/wiki/"" -> ""http://"" expected
+- when the URL does not refer to a wiki: http://www.google.com
+- when the post is impossible because the IP or User name has been blocked at
+the Wiki side
+- when entering settings/posting without/wrong User/PW
+
+TV: I added a simple error dialog in 0.5.1. Not all error conditions are
+implemented yet.
+
+ES: ok you're not finished yet, I see! :) But don't forget to make the warnings
+look like normal warnings (i.e no 3D label and a nice warning icon would be
+cool! :) )"
+
+"An about box with:
+- Branding
+- Copyrights
+- Version number"
+
+"The WikiExtension needs a toolbar with 3 icons:
+- Load
+- Send
+- Settings
+
+Reasons:
+- Good UI guidelines :)
+- Quick sessions of editing/sending/previewing/editing/sending... are realy
+boring over the menu."
+
+"The navigator has a box for entering a page number into.  The way the box works
+makes it surprisingly hard to jump to a particular page number, especially on
+longer documents.
+
+If you clear the contents of this field, it will repopulate itself after a short
+delay.  If you do not type fast, it is impossible to, for example, back space
+over ""50"" and type ""35"" instead.  I witnessed a user end up several times with
+3550 as the page number to go to.  I can't see why this field shouldn't stay
+blank if you backspace over it.
+
+(This is compounded by the fact that the contents are not selected automatically
+when this field is selected.  [seemed to be the case on both Windows and Linux.]
+ If contents were selected, you could simply type your new page number in,
+without having to erase the first one.)
+
+Here's another problem.  Probably meant as a feature, when you put a new number
+in that field, it automatically jumps your document to that page.  But suppose
+I'm on page 135, and start backspacing.  If I pause while typing, I will end up
+on page 13, or page 1.  There is then no obvious way to get back to where I was
+on 135.
+
+If some or all of this is seen as ""feature"" rather than bug, then it would be
+nice to have an option to disable it (perhaps labeled ""make navigator page
+number field act normally."" :) ).  It would also be nice to have an Edit/Go to
+page... menu option, as some MS-word users seem to get thrown for a loop when
+trying to use OO.
+
+Thanks!"
+
+"Looking at the ""PrinterSetup"" config-item in the settings.xml file of OOo/odt 
+documents I notice that it contains a binary chunk of data encoded as base64.
+
+I would like to know more details about the format of that data and how it is 
+written.  Specifically, I'm trying to track down some printer tray related 
+issues.
+
+The only documentation I have found so far is this general description:
+
+  http://api.openoffice.org/docs/common/ref/com/sun/star/document/
+Settings.html#PrinterSetup
+
+Is there a more detailed specification or anything else available?
+
+Thanks a bunch for any information provided."
+
+"HDE->FME: Open bugdoc->search for regular expression '^Halloo' should find word
+'Halloo' but finds nothing."
+
+"When importing (x)html files which contain <ruby> elements, these should be
+converted to ""asian phonetic guide"". At the moment the ruby tags are ignored,
+and the textual content of the ruby elements are displayed un-formatted.
+
+MS-Word correctly imports ruby elements.
+
+See also bug 29009 (http://www.openoffice.org/issues/show_bug.cgi?id=29009)
+which deals with ruby export."
+
+"The fonts in the content.xml and the style.xml files do not ""clean up"" when 
+they are not in use. If a document in produced in font a, then changed to font 
+b, the xml files will have both font a and font b in them. This has been 
+reproduced endless times, and is of great consequence when using open office to 
+produce massive amounts of documents in an automated fasion. many fonts are 
+only available by liscence and should not be appearing in the xml files if they 
+are not in use by the associated document."
+
+"The mechanism of auto-correct is different between the western language and 
+Chinese. In English, there must be a space or a enter or a punctuation between 
+words, so we can do the auto-correct after a separator is entered. But in 
+Chinese ,it̢���s completely different, There is no separator between words, so we 
+must do this job as soon as the words inputed."
+
+Chinese charactor will be garbage when saved as MS95 form.
+
+"Currently, OOo Writer opens text files (e.g. *.txt, *.srt) in html format
+instead of plain text format, if the text body contains tag-like text such as
+<i>, </i> etc.
+
+For example, a plain text file containing the following 5 lines will open in
+Notepad or Microsoft Word as such:
+1<i>abc</i>
+2
+3<i>def</i>
+4
+5<i>ghi</i>
+
+But OOo Writer will open the same text file in html format instead, and display
+the text body differently:
+1abc 2 3def 4 5ghi
+
+-> with letters in italics;
+-> not as 5 lines but 1 line;
+-> <i> and </i> not treated as plain text, but as html tags.
+
+Actually, OOo Writer hangs or lags when large .srt files having these <i>, </i>
+tags are opened. I have to use Notepad to open them, do a Ctrl-A then copy-paste
+all the text into OOo Writer (to do spellchecks & editing).
+
+Please see the following threads for clarification:
+http://www.oooforum.org/forum/viewtopic.phtml?p=244364#244364
+http://www.oooforum.org/forum/viewtopic.phtml?t=49553"
+
+"1. Insert/Object/Chart (either based on a table or without)
+=> You get an activated Chart
+2. Click outside the chart
+=> The Chart is deactivated and you get green selection handles
+3. right click on the chart to get the context menu
+=> the menu has Arrange, Alignment, Anchor, Wrap / Edit
+4. Click outside to de-select the chart
+5. repeat 3. (open context menu)
+=> the menu has Arrange, Alignment, Anchor, Wrap / Object, Caption / Cut, Copy /
+Edit
+
+->TL: This is maybe not your issue. If so, please forward to the responsible person."
+
+"Reproduction:
+In the attached document, try to drug the right edge of the table further to 
+the right.
+Result:
+Text in the table disappears.
+Note:
+Hebrew is a right-to-left language (like Arabic and Thai). To check this bug 
+you may need to install right-to-left languages support on your computer."
+
+"I've been experienced a consistent issue with importing MSWord DOC (Microsoft
+Word 9.0 format) into OOo; since 1.1.x series to the latest 2.3.0 (shipped with
+Ubuntu Gutsy tribe4). My ""test"" document has about 180 pages, two-columns
+structure and contains only characters (I mean, no pictures, tricky embedded OLE
+object or so). The problem is that the import is extremely slow.
+
+I have exact time measurement for the last version (2.3.0; according to About
+dialog, it's ""openoffice.org-core 2.3.0src680m224-1ubuntu2, Wed Aug 8 10:57:20
+GMT 2007""):
+
+on a P4 1.5Ghz, 1G RAM computer it took 1:03:34 to open.
+
+As I recall, the 1.1.4 took 1,5 hours to import this document, so a significant
+improvement was made in the 2.2.x series but it's very slow yet apparently.
+
+After importing, I can save document in OOo (Oasis) file format and the opening
+of an .ODT takes some seconds only.
+
+I'd like to see to open this document much faster (in 4-10 minutes if possible)
+and I hope this issue can help enhancing DOC importer module. Questions are welcome."
+
+"1. Load the attached document
+2. Press return in the first line
+=> the bottom line of the lower table is not painted.
+3. Press Ctrl-Z for undo
+=>the top line of the upper table is not painted.
+
+4. Maybe a different issue (aas no scrolling is involved): go to the last line
+and press enter to add an empty paragraph right under the table.
+=>The bottom line of the lower table is not painted."
+
+"I would opt that hyperlink feature is the same kind as the ""bold"", 
+or ""center"", which means it is toggled on/off. This way user could _easily_ 
+turn off the hyperlink.
+
+Why it is important? Because OOo likes to extend hyperlink, let's say I add 
+hyperlink:
+google
+and then I just start writing more
+google -- pretty nice search engine
+Now, the whole text is a hyperlink and it takes me some time to turn it off. 
+So I have to remember that I have to add space _before_ I even insert 
+hyperlink.
+
+Troublesome, not intuitive -- thus this wish."
+
+"There is an [apply] and [close], but [ok] is missing. It is quite widely used 
+button which means [apply]+[close]. Ok, user can press those two each time, 
+but I think it is a bit odd."
+
+"Running Windows XP, OOG680_m2. 
+When I crop an inserted image in Writer, if I then copy that image to another
+OOo program or any external program, it pastes the original image, not the
+cropped version. I can re-create this is OOo-dev 2.3 and OOo 2.1. This only
+applies to Writer, the other OOo programs copy/paste the cropped image correctly."
+
+"Set the font as ""Tahoma"", a TrueType/OpenType Unicode font that comes with 
+Windows XP.
+Enter some cyrillic letters. After the letter, insert a combining grave accent 
+(U+0x0300) via ""Insert - Special Character..."". With some letters the combining 
+goes as expected. With other letters the ""original"" letter gets replaced by a 
+modified (accented) letter. However, the original letter is not deleted off the 
+screen, and the modified letter is offset to the right.
+This happens with letters U+0x0415 (Cyrillic capital letter Ie) and U+0x0418 
+(Cyrillic capital letter I) and the corresponding small letters. The reason is 
+that Tahoma includes the glyphs U+0x0400 (Cyrillic capital letter Ie with 
+grave) and U+0x040D (Cyrillic capital letter I with grave), so OOw decides to 
+change the combined symbols into one, presumably the same symbol. This does not 
+happen with other ""original"" cyrillic letters, because there are no 
+corresponding accented single glyphs in the font."
+
+"Insert some character via the menu ""Insert - Special character..."" Repeat the 
+process two times via menu ""Edit - Repeat: Insert Special Character"". Notice 
+how the second time the menu shows ""Repeat: Insert $1"" and ""Undo: Insert $1""."
+
+"Hi,
+
+When you click on Insert->Hyperlink->Document->Target, the Target in Document
+browser appears.
+If you're fast and open quickly one of the branch by clicking on the + (e.g. the
+Heading one), you'll see the browser closing the branch you've just open.
+It just happens one time and to reproduce it, you must close the Hyperlink menu
+and re-open it.
+
+In fact, when you open the Target in Document browser, if you wait 1 second, you
+see the browser flashing one time, as if It has made a refresh or something like
+that. Then if you open a branch nothing will happen.
+
+I suppose this second is the time for the browser to be up-to-date with the
+actual document hierarchy.
+
+What is annoying is that when you're fast you wonder why the browser closes itself.
+
+a+, =)
+-=Finiderire=-
+
+PS:I'm a french guy, I apologize for mistakes."
+
+"pdf export from writer results in RGB coding of text.
+A user interface to select text coding is wanted (CMYK or RGB).
+(OOo 2.2.1)"
+
+"1) for the first time of insert->special character please always preselect the 
+current font (from the main editor)
+2) please provide in the ""special character"" dialog the meta-name for the 
+font ""Current"" and make it the first entry in the list
+
+This way it would be really easy to add not-so-special characters (e.g. french 
+quotes) and continue writting, but also it would be possible to keep current 
+behaviour (dialog remembers last font selection, which is good)."
+
+"When scrolling a document with multiple pages, the document scrolls up appropriately for each scroll 
+event. This can be problematic because I do a scroll up, causing say 10 scroll up events and each one is 
+captured and performed. But, because all are captured and performed and because of the slow 
+processing of a scroll event (maybe just my machine or platform of Mac OSX 10.4.10 G4 1GB RAM) the 
+time taken to scroll up a little bit is a few seconds and passes what I wanted to see in most cases. Many 
+times I find myself watching what I wanted to scroll to pass by the screen as I wait for the scrolling 
+events to stop being processed. I have to be very careful not to scroll too much.
+
+NOTE: The current scrolling behavior might function just fine for existing platforms and it could be that 
+it is the mac platform that generates scroll events differently and causing this issue. I remember talking 
+to the NeoOffice people about scroll events and their system was at first multiplying scroll events which 
+led to eradic behavior on slow machines. So, they corrected it but it leads me to believe this behavior is 
+a platform issue and was solved by NeoOffice somehow so could be done here too.
+
+What might be a simple solution to this is to capture the scroll events but if there is a bundle of them in 
+the queue, don't scroll each one separately but maybe do them all at once (might be too large a jump) 
+or in groups of several at a time. This would clear the queue of the events faster and probably be closer 
+to what the user wishes to experience. The entire system would appear much more responsive and 
+interactive. Additionally, a faster system would be able to pop these off the queue faster anyway so it 
+wouldn't backup and need to skip events. Hmm, maybe a better strategy would be even to look at the 
+time of events so it would process a certain time period of scroll events and not a certain number of 
+events on the queue.
+
+Here are some scenarios: 
+1) I want to scroll up maybe half a page. So, I scroll up just a bit. After maybe a half second pause the 
+scrolling starts and I see what I want so I stop.
+Now: The screen keeps scrolling for another half second worth of scroll events. When it finally stops, I 
+have to scroll down again because I overshot what I wanted by a page or half a page.
+Future: Scrolling stops when user scrolling stops. Because the events were pulled from the queue en 
+masse, as opposed to one at a time, the queue was cleared faster and the screen stops when the user 
+wants because nothing else is on the queue.
+
+2) I want to scroll way up the document so I do one long scroll. 
+Now: The document starts to scroll up for each scroll event and I am forced to wait for each redraw of 
+the document as it scrolls up 17 pages, one inch at a time. This takes several seconds.
+Future: The up scroll events are captured in a group and the user is shown the document 17 screens up 
+from the start of the scroll.
+
+NOTE: It might be somewhat disorienting this way so a ramp-up and ramp-down of scroll events might 
+be the desired feel of scrolling."
+
+"i have an .odt file wich cannot be opened correctly on two different computers. 
+the cpu is at 100% after the document was rebuilt (german: wiederhergestellt),
+but nothing happens. the main program doesn���t react so you only can close it. 
+next try will not change anything, same result.
+i can send the file via email if needed.
+
+winXP pro and home tested, same reaction. hardware: asus a8jp and targa
+visionary xp-210 (both notebook)"
+
+"Use the attached document :
+- Open it. 
+- Select all the text page 2 (Samedi 4 mars 2001)
+- go to menu Format|Columns
+- select 2 for the number fo columns
+- press Ok. OOo freeze with CPU usage at 100%. Under Windows, usually after 1
+mn, depend on the sample, OOo is back (otherwise full crash) but the selected
+area disappeared. You can see a small part of the selection on the top right of
+page 2 (document is down from 3 to 2 pages). Under Ubuntu, it never recovered.
+
+An other test :
+- Open the attached document.
+- Change format of style ""Corps de texte fin"" : uncheck Keep with next paragraph
+- Select the same area as previously
+- Format|Columns : 2 columns. This time, no freeze but still not well formatted.
+
+P4 2.0 GHz 1 Gb
+Windows XP SP 2 Home with 000 2.2.1
+Ubuntu 7.04 with OOo 2.2"
+
+"1. Open a document.
+2. Make a numbered list
+3. Right click at number 1 > Paragraph
+4. Numbering tab
+5. Check box restart at this paragraph select start with 1
+6. Click ok
+7. Save document
+8. Close document
+9. Open document
+10. Right click in same place as before > Paragraph
+
+The numbering settings have been forgotten. I have screen shots of doing this
+with a sample document."
+
+"I was attempting to solve a numbering issue I had with the Master Document
+Feature for some time. I eventually resolved the issue but in the discussion
+(link given in the URL: field) I mentioned it would be a good idea to have an
+option in the Master Document preferences to ""Import exact contents of Sub
+Documents"" or ""Always  restart numbering"" This way I wouldn't have to go through
+each document and select restart numbering I could simply check one box and all
+of my sub-documents would stay separated. How often do you create two documents
+that when they merge they become one process?"
+
+"I don't know about everyone else, but it'd be mighty useful for me if, under
+TOOLS - CUSTOMIZE - KEYBOARD OOo included a ""NEXT * STYLE"" where * is PAGE,
+PARAGRAPH, etc.
+
+I type scripts a lot (TV, Movie, Game) using Writer, and usually I need to type
+them fast.  I've a handful of paragraph styles and set them up in a particularly
+useful order for writing out scripts, but sometimes need to skip a style or two
+in the order.  It would be much quicker if I could just press, I don't know,
+ALT+N or something to keep the cursor at its current point but switch to the
+next style in order.
+
+If this has been mentioned, I'm terribly sorry as I have spent time searching
+for like suggestions, and if this is already available in OOo, I'd love to learn
+how to do it.  Google wasn't help at all.  Thanks."
+
+"I compared it with OpenOffice on Windows and interesting thing is that on
+Windows it is rendered correctly.
+ I used fonts such as:
+ - Gautami
+ - TLOT-Hemalatha Normal
+ - TLOT-Hemalatha Italic
+ - TLOT-Hemalatha Bold
+ - TLOT-Hemalatha Bold Italic
+ - and many others
+ For all these fonts I got inappropriate results. Below I put the sequence of
+unicodes which I input to achieve wrong results this is:
+ U+0C2A;U+0C4D;U+0C30;U+0C15;U+0C3E;U+0C37;U+0C4D;
+
+ according to UNICODE standards they are:
+ 0C2A;TELUGU LETTER PA;Lo;0;L;;;;;N;;;;;
+ 0C4D;TELUGU SIGN VIRAMA;Mn;9;NSM;;;;;N;;;;;
+ 0C30;TELUGU LETTER RA;Lo;0;L;;;;;N;;;;;
+ 0C15;TELUGU LETTER KA;Lo;0;L;;;;;N;;;;;
+ 0C3E;TELUGU VOWEL SIGN AA;Mn;0;NSM;;;;;N;;;;;
+ 0C37;TELUGU LETTER SSA;Lo;0;L;;;;;N;;;;;
+ 0C4D;TELUGU SIGN VIRAMA;Mn;9;NSM;;;;;N;;;;;
+
+I will try attach doc document related to this problem."
+
+Certain text in a MS Word document is missing when opened in OO Writer.
+
+"I have several .doc files. Each has one or two
+images. In Microsoft Word images are displayed okay.
+
+In OpenOffice
+they are displayed as solid black areas."
+
+"1) Create a new writer document.
+
+2) type some text : ""This is some text""
+
+3) insert a bookmark ""bk01"", before the word some.
+
+4) insert a bookmark ""bk02"", after the word some. (right clicking on the status bar,  pages indicator 
+displays the two bookmarks...)
+
+5) now do a find and replace of the word ""some"" with ""the"",
+
+6) so the sentence in the document appears as:
+  ""This is the text""
+
+7) Now right click on the status bar, pages indicator, and only the
+second bookmark remains (""bk02""), and this remaining bookmark is wrongly positioned at
+the letter ""t"" of the repacement word ""the"" 
+
+The same defect can be demonstrated via a macro using the ReplaceDescriptor API:
+
+Dim oReplace
+ oReplace = ThisComponent.createReplaceDescriptor() 
+ oReplace.SearchString = ""some""
+ oReplace.ReplaceString = ""the"" 
+ ThisComponent.ReplaceAll(oReplace)"
+
+"In attached document OOo Writer (both 2.2.1 and current 2.3rc version) inserts
+blank page betwen
+pages 10 (that partially filed with text ""PAGE TEN..."") and 11
+(that partially filed with text ""PAGE ELEVEN..."") so that original page 11
+became 12.
+MS Word inserts no blank page there and displays page with text ""PAGE ELEVEN...""
+just after
+the page with text ""PAGE TEN..."""
+
+"OOo Writer (both 2.2.1 and current 2.3rc) shows all content of attached document
+all in one page,
+while MSWord displays last paragraph (text ""AAAAA..."") on the second page."
+
+"As discussed with AW and mba, we should remove the special lazy-paint. This is
+obsolete due to preRendering of new DrawingLayer"
+
+"In Tools >> Outline Numbering >> Position
+
+The 'Numbering alignment' is displayed incorrectly in 'Position and spacing'
+preview sample for the alignments 'Centered' and 'Right'."
+
+"Please have a look on the attached document (german).
+
+In the toolbar you will see a button titled ""Automatische Sicherungskopie
+aktivieren"".
+
+- Before you click on the button please setup a SMTP-Server in the MailMerge
+configuration.
+- After the setup click on the button and enter any values and start the
+automatic backup procedure
+-> you will receive maximum one Email with the document included in the mail
+body but not as an attachment. Also you will see that the procedure stops.
+
+In case you can reproduce this as the next step please remove the password
+protection (password: S030m7J0e) of the starbasic library and run the automatic
+backup procedure again.
+-> The procedure should run continuously and you should also receive backup
+emails continuously with the document as an attachment and not in the mail body."
+
+"After saving a Writter file as MS Office *.doc some formatting get lost. (When 
+this file will be closed and later when will be open again).
+Please have a look on the attached files. There are attached also some 
+snapshots from the screen to show the problem and plus one example file."
+
+"In attached document first line of Table-of-content has black color,
+is not underlined and hase prepended one "" "" (space) character,
+but other lines of TOC are correct (blue underlined hyperlinks with no
+prepended space character).
+
+The bad thing is that in MS Word there is no such problem:
+The first line is of regular Hyperlink and Table-of-content styles...
+and there is also no prepended space character."
+
+"In attached document, in OOo Writer there is indentation of heading about 1,25 cm,
+but when you open it in MS Word there is no indentation (0 cm)"
+
+"If a user saves the attached odt file in doc format, the fontwork moves from the
+left side to the right. See screenshots."
+
+"Regular expressions may be more powerful, but wildcards like * and ? are easier
+for the average PC user"
+
+"Consider the following Basic fragment:
+  Dim oDocument as Object
+  oDocument = createUNOService( ""com.sun.star.text.TextDocument"" )
+
+  MsgBox oDocument.dbg_Properties
+
+- paste it to the Basic IDE
+- place a breakpoint at the line ""MsgBox ...""
+- run the macro
+- in the Watch window at the bottom of the IDE, enter ""oDocument"" and
+  press Enter
+- in the ""Variable"" window, click the ""+"" before the oDocument
+  variable, this way attempting to display its members
+=> OOo crashes
+-"
+
+"Description of Problem:
+When a chemical drawing is copied from ChemDraw onto clipboard, and then pasted into Writer, it get 
+pasted as a low resolution bitmap. In Edit -> Paste Special menu the only option is ""bitmap"" (source 
+""unknown""). 
+
+Steps to reproduce the problem:
+1. copy a drawing from ChemDraw onto clipboard (select -> apple+C)
+2. paste into writer (apple + V)
+
+Actual Results:
+drawing pasted as  bitmap
+
+Expected Results:
+drawing pasted as a high resolution object that can be can be later copied onto clipboard, then pasted 
+back in ChemDraw and further modified in this program.
+
+How often does this happen?
+always
+
+Additional Information (OS patch level, drivers, library
+version, etc.)
+MacOSX, 10.4.10, OpenOffice Aqua alpha version (aquavcl01_20070630.) !same thing happens in the 
+latest OpenOffice X11 version! 
+
+I contacted ChemDraw about this issue and here's their answer:
+
+""I got some feedback on this from development. When a copy takes place from ChemDraw, we put a lot 
+of different file formats on the clipboard. It is then up to the application in which you want to paste to 
+get the correct format from the clipboard. In OpenOffice on Windows the default is bitmap when pasted 
+but for OLE manipulation you need the enhanced metafile format. But at least on Windows you have 
+the choice of doing this manually through the 'paste as' functionality. On Mac this functionality does 
+not seem to be available and OpenOffice is not picking the desired format from the clipboard. It seems 
+that this is a limitation on the side of OpenOffice and there is not much we can do about that.
+
+We suggest you contact the OpenOffice people and have a request entered to solve this problem. If 
+they do require our assistance with regards to selecting the appropriate format for chemical structures 
+from the clipboard they can always contact us.  """
+
+"There is a file with table in attach.
+The last column in table has three pictures, pasted from web.
+Select all table (Ctrl+A or other way), press Delete - pictures are not deleted."
+
+"Ooo writer has poor performance when it try to convert a large volume of data to
+table. All data has separate of space charset.
+
+I select all data ""Ctrl + a""
+Select a option ""Table"" in menu bar > Convert > Text to Table.
+
+Obs: In ""convert text to table"" windows i inform to OOo writer the column is
+separate of space charset.
+
+In Ooo writer processing for 15 minutes in my computer and it can not to convert
+(Ooo_bug.png). In Microsoft Word successful convert in only 3 or 4 minute
+(MS_Word.png).
+
+My computer is a Intel Pentium IV 2.80 Mhz with 512 RAM running windows XP SP2."
+
+"(I opened this under writer but it could be extended to impress too)
+
+I'd like writer to gain a side-by side diff feature. This feature is common in
+text editors (an exemple there: http://meld.sourceforge.net/meld_file1.png)
+
+Why: I often participate in processes where a contractual document is drafted by
+several parties. When one of the writers releases a new version comparing it to
+the last version reviewed is the fastest way to detect changes that may impact
+your party. Right now that's a complex dance of revision marks, printing both
+versions and comparing manually, etc
+
+Why revision marks do not cut it:
+
+1. They can't be left in the finalised document. So a document with revision
+marks is always different from the actual ""official"" document.
+
+2. If you receive a document with revision marks in you can never be sure
+someone didn't already accept a change, hiding it from review (this is quite
+common and occurs even when people are not being malicious, they just make
+editing mistakes).
+
+1+2 means you end up accepting all revisions inconditionnaly in the document
+with revisions, then comparing it to the document without revisions to check
+they are the same, then comparing to the previous ""good"" version to check no
+revision was left out. This is a time-consuming chore that severily detracts
+from in-document revision mark usefulness.
+
+3. Revision marks force a formatting reflow.
+ - Often the reflow is so severe a document with revision marks is totally
+unreadable.
+ - It does funny stuff with tables and floating images
+ - The reflow changes the page numbers, so people never know if the page they're
+commenting on has the same number for other reviewers
+
+4. Accumulating revision marks on a complex document is a shortcut to document
+corruption and Office Suite crashes, especially when combined with repeated
+OO.o/ODF <-> Word/DOC roundtrip conversions
+
+5. You can't use revision marks with protected documents. You need to unprotect
+them before doing a compare. Unprotecting a document sometimes triggers a lot of
+automated changes when the point is to compare unchanged authoritative versions
+
+6. writer complains if you ask it to generate revision marks between documents
+that already include revision marks
+
+I'd like to be able to point writer to two documents (protected or not, that
+include revision marks or not) and have it display them side-by-side,
+highlighting differences, ignoring any existing revision marks, without changing
+the formatting, page numbering, etc of the compared documents
+
+This feature would be especially appealing now that widescreens are common."
+
+"When one adds revision marks to a document by asking writer to compare it to a
+previous version, all the revisions are attributed to him.
+
+This leads to not-so-funny episodes when other reviewers assume a problem change
+was authored by the person that asked writer to create the revision marks.
+
+Please have writer attribute automatically created revision marks to no one, or
+to a neutral entity (Unknown, auto, whatever)"
+
+"For people who are visually impared, the vertical line that forms the text 
+mode cursor is difficult to find on a screen full of text. It would be good if 
+an alternative cursor were available for visibility. For example an open box 
+would be easier to find than the vertical line. Better yet a colored block 
+cursor would be more visible. In the extreem case, the choice to make it blink 
+would make it even more visoble. (Remember the blinking cursor from the VT50 
+days?)
+
+Note that this is different from the mouse cursor which can often be changed 
+at the OS level."
+
+"Instead of replacing the word, the thesaurus replaces the period at the end of
+the sentence with the synonym if the cursor was after the period.
+
+Reproduce like this (in English):
+
+Type ""Timber."". Leave the cursor after the period.
+
+Press Ctrl-F7. Pick ""Lumber"" as replacement.
+
+You get: ""TimberLumber"""
+
+"Create a document with two columns (or create a section with two columns).
+Create a table within that document, with two rows and two columns.
+In the second row of the table, create a manual break > column break.
+
+Nothing happens.
+
+Expected behavior should be that the second table row moves into the second column."
+
+"When having highlighted a text and the highlighting button is pressed the
+highlighting does not stop.
+To get text not to be highlighted after a paragraph of highlighting the text
+needs to be typed then selected and then no fill highlighting needs to be chosen."
+
+"If I have a .doc document with a password-protected section, and I import it 
+in OOWriter, the section is protected ok but with no password."
+
+"If you protect the 1st section of a document in MSWord the header is 
+automatically protected. If you import the document in OOWriter, the 1st 
+section is correctly protected, but the header looses the protection."
+
+"Importing a .doc document and saving it in .doc again looses many of the 
+bookmarks of the file. You can see an example in the attached .doc file. The 
+bookmarks are tied to text form fields, but we can see no relation to which 
+fields are kept and which ones not. 
+
+To reproduce the problem:
+
+* open the document in OOWriter, remove the protection on section 1
+* go to Insert-Bookmarks (you can see many bookmarks)
+* save the document (in .doc format) and open it again in OOWriter
+* go to Insert-Bookmarks, they are still there
+* open it in MSWord
+* go to Insert-Bookmars, there are only few bookmarks"
+
+"It would be very nice, if there were the possibility, to define the dependencies between two 
+templates (paragraphes or page or other) more accurately.
+
+This means: If you define a template depending on another, it inherites the properties from 
+the ""father-template"" like the font, its size, the alignment etc. If you change a property from the 
+father-template later, the change will occure at the child-template, too.
+
+So far, so good.
+
+But if you have more complicated dependencies, i.e. more templates connected to each other, 
+you will eventually want to change a property at the father-template and at some of the 
+child-templates, but not at all child-templates.
+Therefor we would need a possibility, to express, which properties of the child-template should be 
+changed, when the father-template is changed, and which properties should remain origin.
+
+I know that you can change the child-template manually back to the origin. And this will do, if the 
+dependencies are not very complex. But otherwise it would be a nice enhancement.
+
+I think, this issue is not placed correctly at ""Word processor"", because the behaviour is general. 
+Please reassume."
+
+"I would like to suggest to give notes (created by insert>note) an easier identification than by page and line number and/or to mark the referred location within the text (at least when notes are printed with the document). 
+
+At present, you have no (visual) indication where on a page a note is anchored."
+
+"There is a problem with the view of PageSetup an horizontal view on system with 
+dualscreen, the writespace isn't displayed properly. Workspace cannot be 
+displayed full, missing scrollbar on bottom."
+
+"If in a column in a table the content is right aligned and after that the column
+width is reduced and then increased graphically (mouse) on the right side
+remains of the paragraph end are visible. This was tested in Linux (Ubuntu) OOo
+2.3 and Windows XP with OOo 2.2.1.
+Minor defect but irritating. I got a document from an MS Office user and
+couldn't get this marks away until I found this bug even in new odts."

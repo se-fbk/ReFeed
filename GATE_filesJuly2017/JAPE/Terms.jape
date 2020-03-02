@@ -1,0 +1,72 @@
+/*
+* terms.jape
+*
+*/
+
+Phase: annotateTerms
+Input:  Participant Lookup SpaceToken Token
+Options: control = appelt
+
+Rule: termRule
+(
+	{Token.kind==word, Token.category==NNP,Token.orth==upperInitial, Token.length>3 , !Participant}
+	|
+	(
+	{Token.kind==word, Token.category==NNP, Token.orth==upperInitial, Token.length>3, !Participant}
+	{SpaceToken}
+	{Token.kind==word, Token.category==NNP, Token.orth==upperInitial, Token.length>3, !Participant}
+	)
+	|
+	(
+	{Token.kind==word, Token.category==NNP, Token.orth==upperInitial, Token.length>3 ,!Participant}{Token.kind==number}
+	)
+	|
+	(
+	{Token.kind==word, Token.category==NNP, Token.orth==upperInitial, Token.length>3, !Participant}{Token.kind==number}{Token.kind==word, Token.string=="."}{Token.kind==number}
+	)
+	|
+	{Token.kind==word, Token.category== "NN"}|{Token.kind==word, Token.category== "NNS"}
+	|
+	{Token.kind==word, Token.category== "NN"}
+	{SpaceToken}
+	({Token.kind==word, Token.category== "NN"}|{Token.kind==word, Token.category== "NNS"})
+	|
+	(
+	{Token.kind==word, Token.category== "NN"}
+	{SpaceToken}
+	{Token.kind==word, Token.category== "NN"}
+	{SpaceToken}
+	({Token.kind==word, Token.category== "NN"}|{Token.kind==word, Token.category== "NNS"})
+	)
+	|
+	(
+	{Token.kind==word, Token.category== "VBG"}
+	{SpaceToken}
+	({Token.kind==word, Token.category== "NN"}|{Token.kind==word, Token.category== "NNS"})
+	)
+	|
+	(
+	{Token.kind==word, Token.category== "JJ"}
+	{SpaceToken}
+	{Token.kind==word, Token.category== "NN"}
+	{SpaceToken}
+	({Token.kind==word, Token.category== "NN"}|{Token.kind==word, Token.category== "NNS"})
+	)
+	|
+	(
+	{Token.kind==word, Token.category== "JJ"}
+	{SpaceToken}
+	({Token.kind==word, Token.category== "NN"}|{Token.kind==word, Token.category== "NNS"})
+	)
+): term
+-->
+: term
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("term");	
+	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","termRule");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"Term", newFeatures);
+}
+
+
+

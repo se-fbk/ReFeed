@@ -1,0 +1,1 @@
+﻿Related to bug #79611 OOWriter should support bookmarks within frames aka shapes like for example within draw:text box since 1. it is usefull and 2. the odf specs say that it is legal and imho OOWriter should follow the specs to be compatible to other word processors like KWord where it is already implemented. 

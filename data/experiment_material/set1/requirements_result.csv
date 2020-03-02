@@ -1,0 +1,8 @@
+id,requirement,totalScore
+4183,The system shall contain a typical consumptions climatization section,0.22108421737780654
+4172,The system shall allow to specify the characteristics of the electric vehicles owned by the user,0.11395103754686067
+4301,The system shall allow a user to configure her personal data,0.2149157888560217
+4302,The system shall allow a user to configure costs of each type of energy consumption,0.26656593667212625
+4303,The system shall allow a user to compare different energy consumption,0.26983950160114384
+4217,The system shall allow to visualize the characteristics of the electric vehicles owned by the user,0.11395103754686067
+4181,The system shall contain a typical consumptions photovoltaic section,0.22108421737780654

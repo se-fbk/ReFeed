@@ -1,0 +1,1 @@
+﻿The Save Merged Document option does not work. I open my Starting Document go to step 8. The merge wizard says its creating 3 documents the number of records in my Data Source. I Click Save Merged Document and then Save Documents and check the Save As Single Document option but the resulting document contains only the last of the 3 data record documents. 

@@ -1,0 +1,1 @@
+﻿This issue has been split from issue 80204. See attached RTF the last line breaks onto a new page which is not the case in MS Word. Same document as doc gives the same result in Writer. At first glance I noticed a small mismatch in the large block of empty paragraphs in the lower part of page 1. Maybe problem is there. 

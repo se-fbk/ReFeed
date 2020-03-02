@@ -1,0 +1,8 @@
+id,requirement,totalScore
+4184,The system shall allow the user to calculate additional meters related to water and electricity consumption,0.430338365850756
+4177,The system shall allow the user to visualize data about his/her energy consumption core,0.30896500310041
+4174,The system shall maintain and present the timeline of inhabitans in a household,0.232357211194879
+4178,The system shall contain a typical consumptions heating section,0.219776068592331
+4173,The system shall allow to perform the calculation of the electric vehicles consumptions,0.199877577496724
+4179,The system shall contain a typical consumptions electricity section,0.175560212648695
+4182,The system shall contain a typical consumptions mobility section,0.166076384476841

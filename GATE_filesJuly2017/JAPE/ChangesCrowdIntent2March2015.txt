@@ -1,0 +1,6 @@
+I removed
+->NIntentions
+->Terms
+from main.jape
+
+I included the temporal tag {TempNegative} to the file intentions.jape

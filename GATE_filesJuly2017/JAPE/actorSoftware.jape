@@ -1,0 +1,48 @@
+/*
+*  actorSoftware.jape
+*  This phase annotate the entity names of software applications as actors
+*
+*/
+
+Phase: actorSoftware
+Input: Lookup Token
+
+/*   actors Itzel */
+Rule: ActorSoft
+(
+({Lookup.majorType==actors_abbr})
+|
+({Token.kind==word, Token.category==NNP, Token.orth==upperInitial})
+|
+({Token.kind==word, Token.category==NNP, Token.orth==upperInitial}{Token.kind==number})
+|
+({Token.kind==word, Token.category==NNP, Token.orth==upperInitial}{Token.kind==number}{Token.kind==word, Token.string=="."}{Token.kind==number})
+):Actors
+--> 
+: Actors
+  {
+    gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("Actors");	
+	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","ActorSoft");
+	annotations.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"Software", newFeatures);
+}
+/*   actors Itzel */
+
+Rule: Participant   
+(  
+ {Lookup.majorType == person_first}  
+):person  
+-->  
+{  
+AnnotationSet person = bindings.get("person");  
+Annotation personAnn = person.iterator().next();  
+FeatureMap features = Factory.newFeatureMap();  
+features.put("gender", personAnn.getFeatures().get("minorType"));  
+features.put("rule", "Participant");  
+outputAS.add(person.firstNode(), person.lastNode(), "Participant",  
+features);  
+}
+
+
+
+

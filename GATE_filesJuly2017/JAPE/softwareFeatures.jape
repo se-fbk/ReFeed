@@ -1,0 +1,51 @@
+/*
+*  softwareFeatures.jape
+*
+*  This phase annotate
+*
+* 
+*/
+
+Phase: softwareFeatures
+Input: Lookup SpaceToken Token
+
+
+
+Rule: softwareFeaturesR1
+(
+{Lookup.majorType==swFeat}
+):softwareFeatures1
+--> 
+: softwareFeatures1
+  {
+    gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("softwareFeatures1");	
+	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","softwareFeaturesR1");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"softwareFeatures", newFeatures);
+}
+
+/* rule that identifies the directive illocutionary act Question*/
+Rule: softwareFeaturesR2
+(
+	(
+	{Token.kind==word, Token.category== "NN"}
+	{SpaceToken}
+	({Token.kind==word, Token.category== "NN"}|{Token.kind==word, Token.category== "NNS"})
+	)
+	|
+	(
+	({Token.kind==word, Token.category== "NN", Token.orth=="upperInitial"}|{Token.kind==word, Token.category== "NN", Token.orth=="upperInitial"}{Token.kind==word, Token.category== "NN", Token.orth=="upperInitial"})
+	)
+
+): softwareFeatures2
+-->
+: softwareFeatures2
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("softwareFeatures2");	
+	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","softwareFeaturesR2");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"softwareFeatures", newFeatures);
+}
+
+
+

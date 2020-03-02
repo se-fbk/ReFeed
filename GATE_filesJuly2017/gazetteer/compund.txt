@@ -1,0 +1,15 @@
+compound suggestive + question
+(
+	({Token.string=~"[Hh]ave"}|{Token.string=~"[Dd]id"})
+	{SpaceToken}
+	{Token.string=="you"}
+	{SpaceToken}
+	({Token.string=="tried"}|{Token.string=="try"})
+	)
+Why don't you check
+
+
+
+compound suppositive+ negative
+{SpaceToken}
+	({Token.string=="problem"}|{Token.string=="error"}|{Token.string=="issue"})

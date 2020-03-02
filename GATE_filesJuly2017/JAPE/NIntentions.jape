@@ -1,0 +1,100 @@
+Phase: NIntentions
+Input: Question TempSuggestive TempRequirement TempNegative Assertive Suppositive QuestionMark NEG_opinion CODE_LINE Lookup Token SpaceToken Split
+Options: control = brill
+
+
+/************************NESTED QUESTION-SUGGESTIVE**************************/
+/* Rule that identifies the nested intention question + suggestive */
+Rule: NQSuggestAct
+(
+	(
+	{Question, Question contains TempSuggestive}
+	)
+	
+): nqsuggest
+-->
+: nqsuggest
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("nqsuggest");
+	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","NQSuggestAct");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"NestedSuggestive", newFeatures);
+}
+
+/******************** NESTED QUESTION-REQUIREMENT**************************/
+
+/* Rule that identifies the nested intention question + requirement */
+Rule: NQRequirementAct
+(
+	(
+	{Question, Question contains TempRequirement}
+	)
+	
+): nqrequirement
+-->
+: nqrequirement
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("nqrequirement");
+	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","NQRequirementAct");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"FeatureIndicator", newFeatures);
+}
+
+/******************** NESTED SUPPOSITIVE-NEGATIVE**************************/
+
+/* Rule that identifies the nested intention supportive + negative */
+Rule: NSNegativeAct
+(
+	{Suppositive}
+	{SpaceToken}
+	{TempNegative}
+	
+): nsnegative
+-->
+: nsnegative
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("nsnegative");
+	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","NSNegativeAct");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"BugIndicator", newFeatures);
+}
+
+/******************** NESTED ASSERTIVE-NEGATIVE**************************/
+
+/* Rule that identifies the nested intention assertive + negative */
+Rule: NANegativeAct
+(
+	{Assertive}
+	{SpaceToken}
+	{TempNegative}
+	|
+	{Assertive, Assertive contains TempNegative}
+	
+): nanegative
+-->
+: nanegative
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("nanegative");
+	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","NANegativeAct");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"BugIndicator", newFeatures);
+}
+
+/********************NEGATIVE-CODE_LINE**************************/
+
+/* Rule that identifies the intention negative + code line */
+Rule: NegativeCodeLine
+(
+	{NEG_opinion}
+	{SpaceToken}
+	{CODE_LINE}
+	
+): negativeCode
+-->
+: negativeCode
+{
+gate.AnnotationSet matchedAnns= (gate.AnnotationSet) bindings.get("negativeCode");
+	gate.FeatureMap newFeatures= Factory.newFeatureMap();
+	newFeatures.put("rule","NegativeCodeLine");
+	outputAS.add(matchedAnns.firstNode(),matchedAnns.lastNode(),"BugIndicator", newFeatures);
+}

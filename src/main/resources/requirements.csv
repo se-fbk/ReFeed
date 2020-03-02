@@ -1,0 +1,21 @@
+id,title,description
+4176,monthly email with overview of aviable account consumptions,The system shall send monthly email with overview of aviable account consumptions
+4173,electric vehicles consumption calculations,The system shall allow to perform the calculation of the electric vehicles consumptions
+4174,timeline of inhabitans in a household,The system shall maintain and present the timeline of inhabitans in a household
+4175,read-write-access to accounts,The system shall allow to perform a read-write-access to the user electricity accounts
+4172,electric vehicles creation,The system shall allow to specify the characteristics of the electric vehicles owned by the user
+4217,electric vehicles visualization,The system shall allow to visualize the characteristics of the electric vehicles owned by the user
+4177,typical consumptions core,The system shall allow the user to visualize data about his/her energy consumption core
+4180,typical consumptions water section,The system shall allow the user to visualize data about his/her water consumption
+4184,additional meters,The system shall allow the user to calculate additional meters related to water and electricity consumption
+4179,typical consumptions electricity section,The system shall contain a typical consumptions electricity section
+4178,typical consumptions heating section,The system shall contain a typical consumptions heating section
+4181,typical consumptions photovoltaic section,The system shall contain a typical consumptions photovoltaic section
+4183,typical consumptions climatization section,The system shall contain a typical consumptions climatization section
+4182,typical consumptions mobility section,The system shall contain a typical consumptions mobility section
+4300,The system shall allow cancel a user account and delete all info,The system shall allow cancel a user account and delete all info?
+4301,The system shall allow a user to configure her personal data,The system shall allow a user to configure her personal data
+4302,The system shall allow a user to configure costs of each type of energy consumption,The system shall allow a user to configure costs of each type of energy consumption
+4303,The system shall allow a user to compare different energy consumption,The system shall allow a user to compare different energy consumption
+4304,The system shall be available on every smartphone operating system,The system shall be available on every smartphone operating system
+
