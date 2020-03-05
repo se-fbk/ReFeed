@@ -12,7 +12,7 @@ The project is developed using Java 8 and the build is managed via [Maven] (http
 To build the project:
  - clone the repo
  ```sh
- $ git clone git@github.com:se-fbk/ReFeed.git
+ $ git clone https://github.com/se-fbk/ReFeed.git
  ```
 - set some local paths in ```config.properties ```: path to GATE files and path to WordNet DB files; download the files from the respective websites and place them locally, then update the paths in the config file
 -  build the project
